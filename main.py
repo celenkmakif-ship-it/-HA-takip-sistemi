@@ -1,0 +1,32 @@
+import turtle
+
+
+print("İHA kontrol sistemine hoş geldiniz")
+class İHA():
+
+    #initializer method
+    def __init__(self,renk,konum_x,konum_y,rol):
+        self.KonumXgeçmiş = None
+        self.KonumYgeçmiş = None
+        self.renk=renk
+        self.konum_x=konum_x
+        self.konum_y=konum_y
+        self.rol=rol
+
+#property
+Takipci_1=İHA("Mavi",60,0,"Takipci")
+
+#property
+Takipci_2=İHA("Siyah",10,0,"Takipci")
+
+#property
+Lider=İHA("Beyaz",1000,300,"Lider")
+
+KonumXgeçmiş=[(0),(10),(20),(30),(40),(50),(60),(70),(80),(90),(1000)]
+KonumYgeçmiş=[(0),(80),(30),(100),(120),(520),(120),(300),(150),(175),(900)]
+
+def git(x,y):
+    turtle.forward(Takipci_1.KonumXgeçmiş[-5])
+    turtle.forward(Takipci_2.KonumXgeçmiş[-10])
+
+turtle.forward(Lider.konum_x)
